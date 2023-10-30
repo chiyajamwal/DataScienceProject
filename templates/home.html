@@ -1,14 +1,17 @@
 <html>
 <body>
     <div class="login">
-       <h1>Student Exam Performance Indicator</h1>
-   
+        <style>body {
+            background-image: url('https://tse4.mm.bing.net/th?id=OIP.OjlXY3eh4u3dP4i1JVj7eAHaDe&pid=Api&P=0&h=180'); /* Replace 'your-image-url.jpg' with the URL or file path of your image */
+            background-size: cover; /* Adjust the size of the background image */
+        }
+    </style>
        <form action="{{ url_for('predict_datapoint')}}" method="post">
         <h1>
-            <legend>Student Exam Performance Prediction</legend>
+            <center><legend>Student Exam Performance Prediction</legend></center>
         </h1>
         <div class="mb-3">
-            <label class="form-label">Gender</label>
+            <center><label class="form-label">Gender</label>
             <select class="form-control" name="gender" placeholder="Enter you Gender" required>
                 <option class="placeholder" selected disabled value="">Select your Gender</option>
                 <option value="male">
@@ -17,9 +20,9 @@
                 <option value="female">
                     Female
                 </option>
-            </select>
+            </select></center>
         </div>
-        <div class="mb-3">
+        <div class="mb-3"><center>
             <label class="form-label">Race or Ethnicity</label>
             <select class="form-control" name="ethnicity" placeholder="Enter you ethnicity" required>
                 <option class="placeholder" selected disabled value="">Select Ethnicity</option>
@@ -38,9 +41,9 @@
                 <option value="group E">
                     Group E
                 </option>
-            </select>
+            </select></center>
         </div>
-        <div class="mb-3">
+        <div class="mb-3"><center>
             <label class="form-label">Parental Level of Education</label>
             <select class="form-control" name="parental_level_of_education"
                 placeholder="Enter you Parent Education" required>
@@ -63,9 +66,9 @@
                 <option value="some high school">
                     some high school
                 </option>
-            </select>
+            </select></center>
         </div>
-        <div class="mb-3">
+        <div class="mb-3"><center>
             <label class="form-label">Lunch Type</label>
             <select class="form-control" name="lunch" placeholder="Enter you Lunch" required>
                 <option class="placeholder" selected disabled value="">Select Lunch Type</option>
@@ -75,9 +78,9 @@
                 <option value="standard">
                     standard
                 </option>
-            </select>
+            </select></center>
         </div>
-        <div class="mb-3">
+        <div class="mb-3"><center>
             <label class="form-label">Test preparation Course</label>
             <select class="form-control" name="test_preparation_course" placeholder="Enter you Course"
                 required>
@@ -88,24 +91,31 @@
                 <option value="completed">
                     Completed
                 </option>
-            </select>
+            </select></center>
         </div>
-        <div class="mb-3">
+        <div class="mb-3"><center>
             <label class="form-label">Writing Score out of 100</label>
             <input class="form-control" type="number" name="reading_score"
-                placeholder="Enter your Reading score" min='0' max='100' />
+                placeholder="Enter your Reading score" min='0' max='100' /></center>
         </div>
-        <div class="mb-3">
+        <div class="mb-3"><center>
             <label class="form-label">Reading Score out of 100</label>
             <input class="form-control" type="number" name="writing_score"
-                placeholder="Enter your Reading Score" min='0' max='100' />
+                placeholder="Enter your Reading Score" min='0' max='100' /></center>
         </div>
-        <div class="mb-3">
-            <input class="btn btn-primary" type="submit" value="Predict your Maths Score" required />
+        <div class="mb-3"><center>
+            <input class="btn btn-primary" type="submit" value="Predict your Score" required /></center>
         </div>
     </form>
-    <h2>
-       The  prediction is {{results}}
+    <h2><center>
+       The  prediction is {{results}}</center>
     </h2>
-   <body>
+
+                
+    
+    
+
+
+
+    </body>
 </html>
